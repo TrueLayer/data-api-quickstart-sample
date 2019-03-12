@@ -4,9 +4,7 @@ from ..client.api import DataAPI
 from ..client.account import Account
 from ..client.credentials import UserCredentials
 from ..client.client_app import ClientCredentials
-
 from flask import Flask, redirect, request, url_for, render_template
-
 
 # We need your client_id, client_secret and redirect_uri to interact with the Data API
 # We read them from a configuration file, "secrets.json"
@@ -15,13 +13,19 @@ client_creds = ClientCredentials(filepath="secrets.json")
 # 'https://5836b2bc.ngrok.io/signin_callback'
 # It has to be authorized in TrueLayer's console!
 
-
 app = Flask(__name__)
 app.debug = True
 
+# We will store data in a global variable - an in-memory database, if you like
+# Do not do this is a real application!
+# Data should be stored into a proper database.
+CLIENT_DATA = {}
 
-@app.route("/signin", methods=["GET"])
+@app.route("/", methods=["GET"])
 def sign_in():
+
+    CLIENT_DATA = {}
+    
     query = urllib.parse.urlencode(
         {
             "response_type": "code",
@@ -39,11 +43,6 @@ def sign_in():
     auth_uri = f"https://auth.truelayer.com/?{query}"
     return f'Connect you bank account <a href="{auth_uri}" target="_blank">here</a>'
 
-
-# We will store data in a global variable - an in-memory database, if you like
-# Do not do this is a real application!
-# Data should be stored into a proper database.
-CLIENT_DATA = {}
 
 # This is the endpoint that we told TrueLayer's AuthDialog to
 # call once the authentication flow is complete.
