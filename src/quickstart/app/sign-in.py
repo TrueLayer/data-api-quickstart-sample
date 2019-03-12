@@ -37,7 +37,7 @@ def sign_in():
     )
 
     auth_uri = f"https://auth.truelayer.com/?{query}"
-    return f'Please sign in <a href="{auth_uri}" target="_blank">here.</a>'
+    return f'Connect you bank account <a href="{auth_uri}" target="_blank">here</a>'
 
 
 # We will store data in a global variable - an in-memory database, if you like
