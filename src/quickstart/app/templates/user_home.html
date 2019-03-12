@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Main page</title>
+    </head>
+    <body>
+        <h4>Token</h4>
+        <div>CredentialsId: {{client_data_token.credentials_id}}<div><br>
+        <div>Access token: {{client_data_token.access_token}}<div><br>
+        <div>Access token expiration: {{client_data_token.lifetime}}<div><br>
+        <div>Refresh token: {{client_data_token.refresh_token}}<div><br>
+        <a href="/refresh_token"><input type="button" value="Refresh Token"></a> : Refresh the current token
+
+        <hr>
+        
+        <h4>Provider details</h4>
+        <div>Name: {{client_data_provider.providername}}</div>
+        <div>ID: {{client_data_provider.providerid}}</div>
+
+        <hr>
+
+        <h4>Accounts list:</h4>
+        <ul>
+            {% for acc in accounts %}
+            <li id="{{acc.account_id}}">Account name: {{acc.display_name}}<br/>Account ID: {{acc.account_id}}<br/>
+                    <a href="{{ url_for('show_balance', accountId=acc.account_id) }}">Show Balance</a> :
+                    <a href="{{ url_for('show_transactions', accountId=acc.account_id) }}">Show Transactions</a> </li>
+
+            <br/>
+            {% endfor %}
+        </ul>
+   
+    </body>
+</html>

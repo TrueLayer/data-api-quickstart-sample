@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Your account transactions</title>
+    </head>
+    <body>
+        <h4>Your account transactions</h4>
+        <div id="{{account.account_id}}">Account name: {{account.display_name}}</div>
+        <br/>
+        {% for txn in transactions %}
+            <div id="{{txn.transaction_id}}">{{txn.timestamp}} {{txn.description}} {{txn.amount}}</div>
+        {% endfor %}
+    </body>
+</html>
