@@ -122,7 +122,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# IDEA JETBRAINS 
-TL_quicksetup/.idea/
-
-TL_quicksetup/.vscode/
+.idea/
+.vscode/
+.DS_Store/

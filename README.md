@@ -1,4 +1,4 @@
-## TrueLayer Integration sample
+## TrueLayer Data API quickstart sample
 
 ### Overview
 The following Python/Flask sample code shows a very basic integration against TrueLayer's Data API.
@@ -18,8 +18,8 @@ these are the keys that will be required to authenticate and interact with our A
 
 #### Requirements
 System requirements:
-- python 3.7;
-- pip.
+- python 3.7
+- pip
 
 #### Dev environment
 Run the following command to reproduce the virtual environment required to run this example:
