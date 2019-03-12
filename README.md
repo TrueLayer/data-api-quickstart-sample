@@ -54,8 +54,7 @@ In the output there will be a line with
 ```text
 Forwarding https://<randomid>.ngrok.io -> localhost:5000
 ```
-Copy the HTTPS URL, add `signin_callback` (e.g. `https://<randomid>.ngrok.io/signin_callback`) at the end and add it as redirect URI in 
-<https://console.truelayer.com/settings/application> > Redirect URIs.
+Copy the HTTPS URL, add `signin_callback` (e.g. `https://<randomid>.ngrok.io/signin_callback`) at the end and add it as redirect URI in TrueLayern console <https://console.truelayer.com/settings/application> > Redirect URIs.
 
 ### Setting client keys
 In the top folder of this project there is a file called `secrets.json`: you have to replace the provided
