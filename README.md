@@ -52,7 +52,7 @@ ngrok http 5000
 ```
 In the output there will be a line with
 ```text
-Forwarding                    https://<randomid>.ngrok.io -> localhost:5000
+Forwarding https://<randomid>.ngrok.io -> localhost:5000
 ```
 Copy the HTTPS URL, add `signin_callback` (e.g. `https://<randomid>.ngrok.io/signin_callback`) at the end and add it as redirect URI in 
 <https://console.truelayer.com/settings/application> > Redirect URIs.
@@ -73,5 +73,3 @@ FLASK_DEBUG=1 FLASK_APP=src/quickstart/app/sign-in.py pipenv run flask run
 ```
 The application will run on <http://localhost:5000>.
 Visit <http://localhost:5000/signin> to try it out.
-
-
