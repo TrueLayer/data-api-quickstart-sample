@@ -122,6 +122,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Project related items
+secrets.json
 .idea/
 .vscode/
 .DS_Store/
+.local

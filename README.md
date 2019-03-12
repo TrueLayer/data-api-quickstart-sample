@@ -70,5 +70,12 @@ You can now launch the application with a single command:
 # You can use FLASK_DEBUG=0 to disable it
 FLASK_DEBUG=1 FLASK_APP=src/quickstart/app/sign-in.py pipenv run flask run
 ```
-The application will run on <http://localhost:5000>.
-Visit <http://localhost:5000/signin> to try it out.
+
+Visit <http://localhost:5000> to try it out.
+
+From TrueLayer’s Auth Dialog, after allowing permissions, 'Mock Bank' can be selected to try out TrueLayer's Data API.
+Use the following credentials to login:
+```text
+Username: john
+Password: doe
+```
