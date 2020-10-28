@@ -1,4 +1,4 @@
-## TrueLayer Data API quickstart sample
+## [DEPRECATED] TrueLayer Data API quickstart sample
 
 ### Overview
 The following Python/Flask sample code shows a very basic integration against TrueLayer's Data API.
